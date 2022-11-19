@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/stylesheet.css') }}">
+      <!--for bg image in html file-->
+      <!--background-image:url({{ url_for('static', filename='img/img1.jpg') }});-->
+      <title>Water Quality</title>
+   </head>
+   <body>
+         <div class="name">
+            Water Quality
+         </div>
+         <div class="context">
+            {% if result %}
+               Given water sample is {{ result }}
+            {% else %}
+               "Access to safe drinking-water is essential to health, a basic human right and a component of effective policy for health protection. This is important as a health and development issue at a national, regional and local level. In some regions, it has been shown that investments in water supply and sanitation can yield a net economic benefit, since the reductions in adverse health effects and health care costs outweigh the costs of undertaking the interventions."
+            {% endif %}
+         </div>
+         <div class="project">
+            <form method="post" action="/" enctype = "multipart/form-data">
+               <h1 > Potability Checker</h1>
+               <input type="text" name="ph value" id="ph value" placeholder="ph value(0 to 14)" required>
+               <input type="text" name="Hardness" id="Hardness" placeholder="Hardness(mg/L)" required>
+               <input type="text" name="Solids" id="Solids" placeholder="Solids(ppm)" required>
+               <input type="text" name="Chloramines" id="Chloramines" placeholder="Chloramines(ppm)" required>
+               <input type="text" name="Sulfate" id="Sulfate" placeholder="Sulfate(mg/L)" required>
+               <input type="text" name="Conductivity" id="Conductivity" placeholder="Conductivity(uS/cm)" required>
+               <input type="text" name="Organic carbon" id="Organic carbon" placeholder="Organic carbon(ppm)" required>
+               <input type="text" name="Trihalomethanes" id="Trihalomethanes" placeholder="Trihalomethanes(ug/L)" required>
+               <input type="text" name="Turbidity" id="Turbidity" placeholder="Turbidity(NTU)" required>
+               <center><input class="btn" type=submit name="submit_button" value=PREDICT></center>
+            </form>
+         </div>
+   </body>
+</html>
