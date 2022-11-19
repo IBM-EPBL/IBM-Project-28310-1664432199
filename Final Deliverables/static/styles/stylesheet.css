@@ -1,0 +1,125 @@
+body {
+     background-image:url('img1.jpg');
+     font-family: verdana;
+     background-repeat: no-repeat;
+     background-size: cover;
+     animation: loadtransition 2s;
+ }
+
+h1 {
+     font-size: 26px;
+     color: black;
+     font-family: initial;
+     padding: 10px;
+     text-align: center;
+ }
+
+input{
+     display: block;
+     width: 75%;
+     border: aliceblue;
+     border-radius: 6px;
+     outline: 4px;
+     padding: 7px;
+     margin: 10px auto;
+     box-shadow: 0px 0px 13px -5px;
+     transition: all .25s;
+ }
+
+input:hover{
+     margin: 15px auto;
+     width: 80%;
+ }
+
+p{
+     font-size: 20px;
+     margin: 10px 10px 10px 10px;
+     color: black
+ }
+
+form{
+     background: rgba(255, 255, 255, 0.8);
+     border-radius: 10px;
+     position: absolute;
+     width: 27%;
+     margin: 1em 30em;
+ }
+
+div.project{
+     box-shadow: 0px 7px 60px -10px black;
+     width: auto ;
+     font-size: 15px;
+     border-radius: 10px;
+     border: 1px soid rgba(255,255,255,0.3)
+     box-shadow:2px 2px 15px rgba(0,0,0,0.3);
+     color: #ddd;
+     width: 400px;
+     margin: 100px auto 0px auto;
+ }
+
+center input{
+     display: inline-block;
+     background-color: rgba(255, 255, 255);
+     color: black;
+     width:25%;
+     transition: all .25s;
+ }
+
+input.btn:hover{
+     background-color: darkgreen;
+     color: white;
+     letter-spacing: 2px;
+     width:30%
+ }
+
+div.context{
+     display: inline-block;
+     width: 40%;
+     color: black;
+     position: absolute;
+     margin: 7em 4em;
+     font-size: 20px;
+     font-family: cursive;
+     background-color: rgba(255,255,255,0.7);
+     padding: 50px;
+     border-radius: 15px;
+     transition: all 1s;
+ }
+
+div.context:hover{
+     background-color:grey;
+     color:white;
+     padding: 60px;
+     margin: 8em 4em 1em ;
+ }
+
+div.name{
+     display: inline-block;
+     width: auto;
+     color: black;
+     position: absolute;
+     font-size: 67px;
+     font-weight: bold;
+     margin: -0.2em 1em;
+     color: white;
+     font-family: cursive;
+     padding: 0px 0px 0px 100px;
+     transition: all 1s;
+ }
+
+div.name:hover{
+     letter-spacing: 2px;
+     color:aquamarine;
+ }
+
+@keyframes loadtransition{
+    from{
+       opacity:0;
+       transform: rotateX(-10deg);
+
+    }
+    to{
+       opacity:1;
+       transform: rotateX(0deg);
+    }
+ }
